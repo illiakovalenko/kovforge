@@ -5,8 +5,42 @@ on:
     branches: [main]
 
 jobs:
+  canary:
+    name: Canary
+    if: "!contains(github.event.head_commit.message, 'chore: release')"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish canary
+        run: |
+          pnpm changeset version --snapshot canary
+          pnpm changeset publish --tag canary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
   release:
     name: Release
+    needs: canary
+    if: always()
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -35,6 +69,8 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm changeset publish
+          title: Release
+          commit: 'chore: release'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
