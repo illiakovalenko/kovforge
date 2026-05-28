@@ -1,6 +1,6 @@
 {
   "name": "@kovforge/content-devtools-next",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "Developer tooling for Sitecore Content SDK Next.js applications",
   "engines": {
