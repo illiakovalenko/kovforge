@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - [Node.js](https://nodejs.org) `>=24.0.0`
-- [pnpm](https://pnpm.io) `>=11.0.0`
+- [pnpm](https://pnpm.io) `>=10.0.0`
 
 ## Setup
 
