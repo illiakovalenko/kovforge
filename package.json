@@ -1,6 +1,10 @@
 {
-  "name": "kov",
+  "name": "kovforge",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/illiakovalenko/kovforge"
+  },
   "packageManager": "pnpm@10.0.0",
   "scripts": {
     "build": "turbo build",

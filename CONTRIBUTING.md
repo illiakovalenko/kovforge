@@ -8,8 +8,8 @@
 ## Setup
 
 ```sh
-git clone https://github.com/illiakovalenko/kov.git
-cd kov
+git clone https://github.com/illiakovalenko/kovforge.git
+cd kovforge
 pnpm install
 ```
 
