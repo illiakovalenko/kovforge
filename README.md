@@ -1,6 +1,6 @@
 # kovforge
 
-  ![kovforge](./assets/banner.svg)
+  ![kovforge](https://raw.githubusercontent.com/illiakovalenko/kovforge/main/assets/banner.svg)
 
   Personal open source packages by [Illia Kovalenko](https://github.com/illiakovalenko).
 
