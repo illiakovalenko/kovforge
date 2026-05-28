@@ -114,7 +114,7 @@ function DevtoolsInner(): ReactElement | null {
         title="KovForge DevTools"
         onClick={() => setOpen((o) => !o)}
       >
-        SC
+        KovForge
       </button>
 
       {open && (
