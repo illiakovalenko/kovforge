@@ -1,0 +1,50 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#0d1117" rx="10"/>
+
+  <!-- Anvil: single sharp polygon -->
+  <polygon
+    points="48,88 92,70 178,70 178,94 163,116 172,116 172,134 86,134 86,116 95,116 92,94"
+    fill="#10b981"
+  />
+  <!-- Anvil: waist darker layer for depth -->
+  <polygon points="92,94 178,94 163,116 95,116" fill="#059669"/>
+
+  <!-- Hammer (striking from upper right) -->
+  <g transform="translate(140, 60) rotate(75)">
+    <!-- Handle extends upward — points upper-right in world space -->
+    <rect x="-4" y="-50" width="8" height="48" rx="2" fill="#7c5c1e"/>
+    <!-- Head at the striking end -->
+    <rect x="-16" y="-9" width="32" height="18" rx="2" fill="#e6edf3"/>
+  </g>
+
+  <!-- Sparks at impact point -->
+  <circle cx="128" cy="62" r="2.8" fill="#fbbf24"/>
+  <circle cx="118" cy="54" r="2" fill="#f59e0b"/>
+  <circle cx="140" cy="56" r="1.5" fill="#fbbf24"/>
+  <circle cx="112" cy="65" r="1.8" fill="#fcd34d"/>
+  <circle cx="132" cy="48" r="1.2" fill="#f59e0b"/>
+  <circle cx="148" cy="58" r="1" fill="#fbbf24"/>
+
+  <!-- kovforge text -->
+  <text
+    x="218"
+    y="115"
+    font-family="Consolas, Menlo, 'Courier New', monospace"
+    font-size="50"
+    font-weight="700"
+    letter-spacing="-0.5"
+  >
+    <tspan fill="#e6edf3">kov</tspan><tspan fill="#10b981">forge</tspan>
+  </text>
+
+  <!-- Subtle author line -->
+  <text
+    x="220"
+    y="148"
+    font-family="Consolas, Menlo, 'Courier New', monospace"
+    font-size="13"
+    fill="#30363d"
+    letter-spacing="1"
+  >by illiakovalenko</text>
+</svg>
