@@ -1,0 +1,59 @@
+{
+  "name": "@kovforge/content-devtools-next",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Developer tooling for Sitecore Content SDK Next.js applications",
+  "engines": {
+    "node": ">=24"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "keywords": [
+    "kovforge",
+    "content-sdk",
+    "devtools",
+    "nextjs",
+    "developer-tools"
+  ],
+  "author": "Illia Kovalenko",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/illiakovalenko/kovforge",
+    "directory": "packages/content-devtools-next"
+  },
+  "homepage": "https://github.com/illiakovalenko/kovforge/tree/main/packages/content-devtools-next",
+  "bugs": "https://github.com/illiakovalenko/kovforge/issues",
+  "peerDependencies": {
+    "@sitecore-content-sdk/react": ">=2.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@sitecore-content-sdk/react": "^2.1.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "tsdown": "^0.22.1",
+    "typescript": "~6.0.3"
+  }
+}
