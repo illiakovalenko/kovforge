@@ -8,8 +8,7 @@
 
   | Package | Description | Version |
   |---------|-------------|---------|
-  | [@kovforge/content-devtools-next](./packages/content-devtools-next) | Developer tooling for Sitecore Content SDK + Next.js |       
-  [![npm](https://img.shields.io/npm/v/@kovforge/content-devtools-next)](https://www.npmjs.com/package/@kovforge/content-devtools-next) |    
+  | [@kovforge/content-devtools-next](./packages/content-devtools-next) | Developer tooling for Sitecore Content SDK + Next.js | [![npm](https://img.shields.io/npm/v/@kovforge/content-devtools-next)](https://www.npmjs.com/package/@kovforge/content-devtools-next) |
 
   ## Stack
 
