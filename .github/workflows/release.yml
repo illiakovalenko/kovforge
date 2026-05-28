@@ -31,7 +31,13 @@ jobs:
 
       - name: Publish canary
         run: |
-          pnpm changeset version --snapshot canary
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          pnpm -r exec node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            pkg.version = pkg.version + '-canary-$TIMESTAMP';
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
           pnpm changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
